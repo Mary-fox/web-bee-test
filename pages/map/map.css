@@ -95,4 +95,30 @@ body {
 .nav__item_active {
     background: #F1F1F1;
 }
+.mobile__arrow {
+    display: none;
+}
+
+
+@media (max-width: 800px) { 
+    .nav__burger {
+        position:fixed;
+        display: flex;
+        flex-direction: column-reverse;
+        right: -200px;
+        background-color: #F1F1F1;
+        opacity: 0.9;
+        transition: all 0.8s ease-out;
+        padding: 0 20px 0 20px;
+    }
+    .nav__burger_active {
+        right: 10px;
+        transition: all 0.8s ease-in;
+    }
+    .mobile__arrow {
+        display: block;
+        align-items: center;
+        display: flex;
+    }
+}
 
