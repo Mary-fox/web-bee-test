@@ -110,7 +110,7 @@ body {
 } */
 
 
-@media (max-width: 800px) { 
+/* @media (max-width: 800px) { 
     .nav__burger {
         position:fixed;
         display: flex;
@@ -130,5 +130,15 @@ body {
         align-items: center;
         display: flex;
     }
-}
+} */
 
+@media (min-width: 1400px) {
+    :root {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 1.5rem;
+    }
+    
+    .container-xxl {
+      max-width: 1440px;
+    }
+  }
