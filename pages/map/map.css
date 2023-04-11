@@ -60,6 +60,9 @@ body {
 .nav__item_active {
     background: #F1F1F1;
 }
+.navbar-collapse {
+    z-index: 10;
+}
 
 @media (min-width: 1400px) {
     :root {
