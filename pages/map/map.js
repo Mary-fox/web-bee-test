@@ -1,6 +1,4 @@
-window.onload = function() {
-    initMap();
-  }
+ymaps.ready(initMap);
 // Инициализация карты
 function initMap() {
     const map = new ymaps.Map("map", {
