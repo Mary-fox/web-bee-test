@@ -46,7 +46,7 @@ class Router {
             };
          
 
-            if(htmlName === "map.html") setTimeout(() => {ymaps.ready(initMap)}, 100)
+            if(htmlName === "map.html") setTimeout(() => {ymaps.ready(initMap)}, 100) //инициализация карты
             xhttp.open('GET', url, true);
             xhttp.send();
         })(this);
