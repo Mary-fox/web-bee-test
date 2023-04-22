@@ -1,0 +1,191 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition:  all 0.5s ease-in;
+    font-family: 'Roboto', sans-serif;
+
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #505050;
+}
+
+button {
+    cursor: pointer;
+}
+li {
+    list-style-type: none;
+}
+html,
+body {
+    overflow: overlay;
+    scroll-behavior: smooth;
+    background-color: #F1F1F1;
+}
+.breadcrumbs__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+.breadcrumbs__link:last-child {
+    font-weight: 400;
+}
+.header__item img {
+    padding-bottom: 6px;
+}
+.header__subnavbar {
+    height: 40px;
+}
+.header__main-navbar {
+    height: 64px;
+}
+.nav__item a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #505050;
+}
+.navbar-toggler-icon {
+    width: 25px;
+    height: 25px;
+} 
+
+.nav__item_active {
+    background: #F1F1F1;
+}
+.post {
+    margin-top: 32px;
+    color: #505050;
+}
+.post__image {
+    width: 100%;
+    padding-bottom: 10px;
+}
+.post__icon {
+    padding-left: 10px;
+}
+.post__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.post__time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.skills__list, .education__list {
+    gap: 5px;
+}
+.skills__title, .education__title {
+    font-size: 18px;
+    line-height: 21px;
+}
+.skills__item, .education__item, .post__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.sidebar__container{
+    margin-top: 32px;
+}
+.sidebar__card {
+    padding: 32px 51px 26px 51px;
+}
+.sidebar__avatar{
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.sidebar__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #505050;
+}
+.sidebar__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    color: #8F8F8F;
+}
+.navigation__block, .message__block {
+    color: #505050;
+}
+.navigation__header, .message__header{
+    padding: 8px 15px 9px 15px;
+}
+.message__header {
+    margin-bottom: 1px;
+}
+.navigation__header h3, .message__header h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.navigation__item {
+    margin-bottom: 2px;
+    padding: 19px 16px 19px 19px;
+    gap: 19px;
+}
+.navigation__item:last-child {
+    margin-bottom: 0;
+}
+
+.navigation__item li span {
+    position: absolute;
+    right: 0;
+}
+.quantity {
+    border-radius: 8px;
+    padding: 0 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.quantity_red {
+    background: #E33939;
+}
+.quantity_green {
+    background: #47B091;
+}
+.navigation__title {
+    font-size: 14px;
+    line-height: 16px;
+}
+.navigation__balance {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8F8F8F;
+}
+.message__container {
+    padding: 8px 16px 16px 16px;
+}
+.message__container textarea {
+    padding: 8px 16px  0 16px;
+    margin-bottom: 8px;
+    resize: none;
+}
+.message__btn {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+@media (min-width: 1400px) {
+    :root {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 1.5rem;
+    }
+    
+    .container-xxl {
+      max-width: 1440px;
+    }
+  }
