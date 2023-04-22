@@ -27,7 +27,7 @@ class Router {
                 }
             }
         } else {
-            for (let i = 0, length = r.length; i < length; i++) {
+            for (let i = 0, length = routes.length; i < length; i++) {
                 const route = routes[i];
                 if(route.default) {
                     scope.goToRoute(route.htmlName);
