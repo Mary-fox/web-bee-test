@@ -44,8 +44,8 @@ class Router {
                     scope.rootElem.innerHTML = this.responseText;
                 }
             }; //вставляем содержимое MLHttpRequest в корневой элемент страницы.
-            if(htmlName === "map.html") setTimeout(() => {ymaps.ready(initMap)}, 100) //инициализация карты
-            if(htmlName === "time.html") setTimeout(() => { updateTimer()}, 100) // загрузка таймера
+            if(htmlName === "map.html") setTimeout(() => {ymaps.ready(initMap)}, 300) //инициализация карты
+            if(htmlName === "time.html") setTimeout(() => { updateTimer()}, 300) // загрузка таймера
             xhttp.open('GET', url, true);
             xhttp.send();
         })(this);
