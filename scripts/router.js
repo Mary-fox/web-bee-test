@@ -16,7 +16,7 @@ class Router {
                 scope.hasChanged(scope, routes);
             });
         })(this, routes);
-        this.hasChanged(this, routes);
+        this.hasChanged(this, routes); //проверяем текущий маршрут
     }
     hasChanged(scope, routes){
         if (window.location.hash.length > 0) {
@@ -34,7 +34,7 @@ class Router {
                 }
             }
         }
-    }
+    } // проверяем хэш URL-адреса и сравниваем его со всеми маршрутами, чтобы определить, какой маршрут активен. Если ни один маршрут не соответствует текущему хэшу, то выбираем маршрут по умолчанию.
     goToRoute(htmlName) {
         (function(scope) { 
             let url = 'pages/' + htmlName,
@@ -43,10 +43,9 @@ class Router {
                 if (this.readyState === 4 && this.status === 200) {
                     scope.rootElem.innerHTML = this.responseText;
                 }
-            };
-         
-
+            }; //вставляем содержимое MLHttpRequest в корневой элемент страницы.
             if(htmlName === "map.html") setTimeout(() => {ymaps.ready(initMap)}, 100) //инициализация карты
+            if(htmlName === "time.html") setTimeout(() => { updateTimer()}, 100) // загрузка таймера
             xhttp.open('GET', url, true);
             xhttp.send();
         })(this);

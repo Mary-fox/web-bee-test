@@ -1,25 +1,20 @@
-
-function Route(name, htmlName, defaultRoute) {
+class Route {
+    constructor(name, htmlName, defaultRoute) {
     try {
         if(!name || !htmlName) {
             throw 'error: name and htmlName params are mandatories';
         }
-        this.constructor(name, htmlName, defaultRoute);
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-Route.prototype = {
-    name: undefined,
-    htmlName: undefined,
-    default: undefined,
-    constructor: function (name, htmlName, defaultRoute) {
         this.name = name;
         this.htmlName = htmlName;
         this.default = defaultRoute;
-    },
-    isActiveRoute: function (hashedPath) {
-        return hashedPath.replace('#', '') === this.name; 
+    } catch (e) {
+        console.error(e);
+    } //маршрут, который содержит имя маршрута, имя HTML-файла и флаг
+}
+
+
+    isActiveRoute (hashedPath) {
+        return hashedPath.replace('#', '') === this.name; //проверяем, соответствует ли текущий хэш URL-адреса данному маршруту.
+
     }
 }
