@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
-import {Link} from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
 import back from '../../assets/icon/Back.svg'
 import statistics from '../../assets/icon/Statistics.svg'
 import invoices from '../../assets/icon/Invoices.svg'
@@ -18,7 +18,12 @@ import arrowDown from '../../assets/icon/Arrow-down.svg'
 
 
 function Header() {
-
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState('/');
+  
+    useEffect(() => {
+      setActiveLink(location.pathname);
+    }, [location]);
   return (
     <header className="header">
         <nav className="header__main-navbar bg-white shadow-sm mb-1 navbar navbar-expand-lg navbar-light bg-light pt-3 pb-1  mb-1">
@@ -56,19 +61,19 @@ function Header() {
               <div className="navbar-collapse collapse justify-content-between"  id="navbarNav">
                 <ul className="navbar-nav gap-2 bg-secondary-subtle">
                     <li className="nav__item d-flex ">
-                        <Link className="d-flex align-items-center nav__item_active py-2 ps-3 pe-2 gap-2" to="/">
+                        <Link className={`d-flex align-items-center  py-2 ps-3 pe-2 gap-2 ${activeLink === '/' ? 'nav__item_active' : ''}`} to="/">
                             <img src={activity} alt="Activity icon"/>
                             <p className="mb-0">Activity</p>
                         </Link>
                     </li>
                     <li className="nav__item d-flex align-items-center">
-                        <Link className="d-flex align-items-center py-2 ps-3 pe-2 gap-2" to="/map">
+                        <Link className={`d-flex align-items-center  py-2 ps-3 pe-2 gap-2 ${activeLink === '/map' ? 'nav__item_active' : ''}`} to="/map">
                             <img src={map} alt="Map icon"/>
                             <p className="mb-0">Map</p>
                         </Link>
                     </li>
                     <li className="nav__item d-flex align-items-center">
-                        <Link className="d-flex align-items-center py-2 ps-3 pe-2 gap-2" to="/time">
+                        <Link className={`d-flex align-items-center  py-2 ps-3 pe-2 gap-2 ${activeLink === '/time' ? 'nav__item_active' : ''}`} to="/time">
                             <img src={time} alt="Time icon"/>
                             <p className="mb-0">Time</p>
                         </Link>

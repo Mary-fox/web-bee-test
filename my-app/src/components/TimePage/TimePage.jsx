@@ -1,28 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "../Header/Header";
 import './TimePage.css'
 import down from '../../assets/icon/map-down.svg'
 import update from '../../assets/icon/map-update.svg'
 import close from '../../assets/icon/map-close.svg'
-
+import { useState, useEffect} from 'react';
 
 function TimePage() {
     const [time, setTime] = useState(0);
 
     useEffect(() => {
-      const intervalId = setInterval(() => {
-        setTime(time => time + 1);
-      }, 1000);
-      return () => clearInterval(intervalId);
+      const startTime = parseInt(localStorage.getItem('startTime')) || Date.now();
+  
+      const interval = setInterval(() => {
+        const now = Date.now();
+        const elapsedTime = now - startTime;
+        setTime(elapsedTime);
+        localStorage.setItem('startTime', startTime);
+      }, 100);
+  
+      window.addEventListener('beforeunload', handleBeforeUnload);
+  
+      return () => {
+        clearInterval(interval);
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
     }, []);
   
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
+    const handleBeforeUnload = () => {
+      localStorage.setItem('startTime', Date.now());
+    };
   
+    const formatTimer = (time) => {
+      const seconds = Math.floor(time / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
   
-
+      return `${hours}:${minutes % 60}:${seconds % 60}`;
+    };
   return (<>
 
    <Header/>
@@ -36,7 +52,9 @@ function TimePage() {
                     <img role="button" src={close} alt="btn close"/>
                 </div>
             </div>
-            <div>{`${hours}:${minutes}:${seconds}`}</div>
+            <div>
+            <div>{formatTimer(time)}</div>
+    </div>
         </div>
     </section>
     </>
