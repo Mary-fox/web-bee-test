@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/web-bee-test/static/css/main.5d4d7c71.css",
+    "main.js": "/web-bee-test/static/js/main.8a993f62.js",
+    "static/js/787.28cb0dcd.chunk.js": "/web-bee-test/static/js/787.28cb0dcd.chunk.js",
+    "static/media/my-photo.jpg": "/web-bee-test/static/media/my-photo.1f4f5f895234e741807f.jpg",
+    "static/media/post-image.jpg": "/web-bee-test/static/media/post-image.20b655cdd27d18602aa0.jpg",
+    "static/media/Finance-Outline.svg": "/web-bee-test/static/media/Finance-Outline.0e923b02c0505efeb2227da9777112a9.svg",
+    "static/media/Statistics.svg": "/web-bee-test/static/media/Statistics.ce3f5ae8ca38e4f7e6da204e05ba587d.svg",
+    "static/media/Settings.svg": "/web-bee-test/static/media/Settings.c2c3082111f1aba7395fe7825254cc60.svg",
+    "static/media/Settings-Outline.svg": "/web-bee-test/static/media/Settings-Outline.9889f276d692276b5a829138ce8ae638.svg",
+    "static/media/Invoices.svg": "/web-bee-test/static/media/Invoices.3797069d756346fef8dcab2d4bb81530.svg",
+    "static/media/Scheme-Outline.svg": "/web-bee-test/static/media/Scheme-Outline.902ba44b35d0fa45139e7d497b7f6311.svg",
+    "static/media/Friends.svg": "/web-bee-test/static/media/Friends.d16d0e710a300c3efe21d14707c25f5f.svg",
+    "static/media/People-Outline.svg": "/web-bee-test/static/media/People-Outline.5a913af852005c23b0f4b82ce918aaf0.svg",
+    "static/media/Calendar-Outline.svg": "/web-bee-test/static/media/Calendar-Outline.fe61f63b7f3b5895fbce71ae9ffe5678.svg",
+    "static/media/Map.svg": "/web-bee-test/static/media/Map.494f88003063637051b2a74c02e6bbe6.svg",
+    "static/media/Schedule.svg": "/web-bee-test/static/media/Schedule.5375c6e49edec7c343e532ecf07933d6.svg",
+    "static/media/Notes.svg": "/web-bee-test/static/media/Notes.8d730039caee59d5e57559edc9a61811.svg",
+    "static/media/Photos.svg": "/web-bee-test/static/media/Photos.fd293f3280081da44f6eb8267acd0fb9.svg",
+    "static/media/hh.svg": "/web-bee-test/static/media/hh.ef65d2bf3e239675719fb06f6474f3c1.svg",
+    "static/media/map-update.svg": "/web-bee-test/static/media/map-update.328d18b3ee47b1603f61c8cb9aa5158e.svg",
+    "index.html": "/web-bee-test/index.html",
+    "static/media/Activity.svg": "/web-bee-test/static/media/Activity.ddd0ca44ce6923cae641555c925ac632.svg",
+    "static/media/preloader.svg": "/web-bee-test/static/media/preloader.e9398f7ab65c30518dfe.svg",
+    "static/media/Person-Outline.svg": "/web-bee-test/static/media/Person-Outline.819b6bed30f647b5009e9c3363f9143d.svg",
+    "static/media/telegram.svg": "/web-bee-test/static/media/telegram.230f3cf02036b751eb86b09a32398e9e.svg",
+    "static/media/Time.svg": "/web-bee-test/static/media/Time.b123faef80d3466b7f746f8570ab1751.svg",
+    "static/media/Back.svg": "/web-bee-test/static/media/Back.26dc3f3807033f8e638f4d70c37486bf.svg",
+    "static/media/map-close.svg": "/web-bee-test/static/media/map-close.59586ced89f271a07ada0f1bfc9ed7af.svg",
+    "static/media/Arrow-down.svg": "/web-bee-test/static/media/Arrow-down.e78bc20585be2c797252572703f5069d.svg",
+    "static/media/Chevron-down.svg": "/web-bee-test/static/media/Chevron-down.d09cda802412b95311d8c3a63cddfe5f.svg",
+    "static/media/map-down.svg": "/web-bee-test/static/media/map-down.bb9de56c55748152d515cbb3d538f9ec.svg",
+    "static/media/outline-down.svg": "/web-bee-test/static/media/outline-down.a7a194b9550abe8eb450b80ad6b53115.svg",
+    "main.5d4d7c71.css.map": "/web-bee-test/static/css/main.5d4d7c71.css.map",
+    "main.8a993f62.js.map": "/web-bee-test/static/js/main.8a993f62.js.map",
+    "787.28cb0dcd.chunk.js.map": "/web-bee-test/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d4d7c71.css",
+    "static/js/main.8a993f62.js"
+  ]
+}
