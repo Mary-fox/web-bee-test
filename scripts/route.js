@@ -13,7 +13,9 @@ class Route {
 }
 
 
-    isActiveRoute(location) {
-        return location.endsWith(this.name);
-    }
+isActiveRoute(location) {
+    const lastIndex = location.lastIndexOf('/')
+    const currentPath = `/${location.slice(lastIndex + 1)}`;
+    return currentPath === this.name;
+}
 }

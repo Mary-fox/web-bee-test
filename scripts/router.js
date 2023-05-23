@@ -51,11 +51,11 @@ class Router {
                     return;
                 }
                 this.rootElem.innerHTML = data;
-                if (url.endsWith('/map.html') && typeof initMap === 'function') {
+                if (url.endsWith('map.html') && typeof initMap === 'function') {
                     ymaps.ready(initMap);
                 }
-                if (url.endsWith('/time.html') && typeof updateTimer === 'function') {
-                    updateTimer();
+                if (url.endsWith('time.html') && typeof updateTimer === 'function') {
+                    setTimeout(() => { updateTimer()}, 300);
                 }
             })
             .catch(error => {
