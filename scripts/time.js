@@ -8,8 +8,9 @@ function updateTimer() {
   const seconds = Math.floor(((duration % 3600000) % 60000) / 1000); 
     
 
+  if (window.location.pathname === '/time') {
       document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`; 
-  
+  }
 
   // Обновление таймера каждую секунду
   setTimeout(updateTimer, 1000);
