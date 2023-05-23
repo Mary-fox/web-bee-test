@@ -46,16 +46,12 @@ class Router {
                 throw new Error('The response was not "ok"');
             })
             .then(data => {
-                if (!this.rootElem) {
-                    console.error('Root element not found');
-                    return;
-                }
                 this.rootElem.innerHTML = data;
-                if (url.endsWith('map.html') && typeof initMap === 'function') {
-                    ymaps.ready(initMap);
+                if (url.endsWith('/map.html')) {
+                    ymaps.ready(initMap)
                 }
-                if (url.endsWith('time.html') && typeof updateTimer === 'function') {
-                    setTimeout(() => { updateTimer()}, 300);
+                if (url.endsWith('/time.html')) {
+                    updateTimer()
                 }
             })
             .catch(error => {
@@ -63,6 +59,7 @@ class Router {
             });
     }
 };
+
 // class Router {
 //     constructor(routes) {
 //         if (!routes) {
