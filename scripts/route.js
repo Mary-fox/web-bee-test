@@ -13,8 +13,7 @@ class Route {
 }
 
 
-    isActiveRoute (hashedPath) {
-        return hashedPath.replace('#', '') === this.name; //проверяем, соответствует ли текущий хэш URL-адреса данному маршруту.
-
+    isActiveRoute(location) {
+        return location.endsWith(this.name);
     }
 }
