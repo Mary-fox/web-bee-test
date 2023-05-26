@@ -24,26 +24,12 @@ class Router {
         window.addEventListener('pushState', () => {
           window.addEventListener('popstate', () => this.hasChanged(routes));
         });
-      
-        // Обработка события beforeunload
-        window.addEventListener('beforeunload', event => {
-          // Получаем текущий URL
-          const currentUrl = window.location.pathname;
-          const activeRoute = routes.find(route => route.isActiveRoute(currentUrl));
-          // Проверяем, нужно ли загрузить соответствующий HTML-файл для активного маршрута
-          if (activeRoute) {
-            event.preventDefault();
-            this.goToRoute(activeRoute.htmlName);
-          } else {
-            // Перенаправляем пользователя на стартовую страницу
-            window.location.replace('/');
-          }
-        });
-      
+    
         this.hasChanged(routes);
       }
       hasChanged(routes) {
         const location = window.location.pathname;
+        
         const route = routes.find(route => location.endsWith(route.name) || route.default);
         if (route && route.isActiveRoute(location)) {
             this.goToRoute(route.htmlName);
@@ -51,28 +37,42 @@ class Router {
             console.log(`No active route found for path: ${location}`);
         }
     }
+    
     goToRoute(htmlName) {
-        const url = 'pages/' + htmlName;
-        
+        const url ='./pages/' + htmlName;
+    
         fetch(url)
             .then(response => {
                 if (response.ok) {
                     return response.text();
                 }
+    
+                // Обработка ошибок
                 throw new Error('The response was not "ok"');
             })
             .then(data => {
                 this.rootElem.innerHTML = data;
+    
+                // Инициализация карты или таймера
                 if (url.endsWith('/map.html')) {
-                    ymaps.ready(initMap)
+                    ymaps.ready(initMap);
                 }
                 if (url.endsWith('/time.html')) {
-                    updateTimer()
+                    updateTimer();
                 }
             })
             .catch(error => {
                 console.error('Fetch error:', error);
+    
+                // Добавляем отладочную информацию
+                console.log('Error message:', error.message);
+                console.log('Response status:', error.response.status);
+                console.log('Response text:', error.response.text());
+    
+                // Перенаправление на главную страницу при ошибке 404
+                if (error.message === 'The response was not "ok"' && error.response.status === 404) {
+                    window.location.replace('/');
+                }
             });
     }
-};
-
+}
