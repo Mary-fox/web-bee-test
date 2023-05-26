@@ -39,7 +39,7 @@ class Router {
     }
     
     goToRoute(htmlName) {
-        const url ='pages/' + htmlName;
+        const url ='./pages/' + htmlName;
     
         fetch(url)
             .then(response => {
