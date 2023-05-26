@@ -20,7 +20,7 @@ class Router {
           window.history.pushState({}, '', target.href);
           this.hasChanged(routes);
         });
-        window.addEventListener('popstate', () => this.hasChanged(routes));
+        window.addEventListener('popstate', () => this.hasChanged(routes));  //нажатие на  кнопку "назад" или "вперед" в браузере,
         window.addEventListener('pushState', () => {
           window.addEventListener('popstate', () => this.hasChanged(routes));
         });
@@ -76,3 +76,11 @@ class Router {
             });
     }
 }
+
+
+
+
+
+
+
+
