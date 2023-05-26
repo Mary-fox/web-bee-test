@@ -44,7 +44,9 @@ class Router {
         fetch(url)
             .then(response => {
                 if (response.ok) {
+                    console.log(window.location.pathname)
                     return response.text();
+                    
                 }
     
                 // Обработка ошибок
